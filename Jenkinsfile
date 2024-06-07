@@ -25,10 +25,5 @@ pipeline{
                  sh "terraform apply -var 'region=${params.region}' --auto-approve"
             }
         }
-        stage('terraform destroy'){
-            steps{
-              sh "terraform destroy -var 'region=${params.region}' --auto-approve"
-            }
-        }
     }
 }
